@@ -1,0 +1,40 @@
+@import "_resets.scss";
+
+@mixin ortak ($arka-renk, $condition) {
+    width: 700px;
+    height: 200px;
+    margin: 10px auto 0;
+    border: 10px solid rgba(255, 43, 43, 0.753);
+    background-color: $arka-renk;
+
+    @if $condition ==sabanizi {
+        border-style: groove;
+    }
+
+    @else if $condition ==noktalı {
+        border-style: dotted;
+    }
+
+    @else if $condition ==çift {
+        border-style: double;
+    }
+
+    @else {
+        @error "bilinmeyen ifade #{$condition}";
+        // error komutu da bu şekilde belirli koşullar karşılanmadığında ekrana hata mesajları verilmesini sağlar
+    }
+
+    // if else komutları işte böyle yazıldığı fonksiyon komutunun scope'ları içine yazılır
+}
+
+.header {
+    @include ortak(blue, noktalı)
+}
+
+.main {
+    @include ortak(springgreen, çift)
+}
+
+.footer {
+    @include ortak(yellowgreen, ayakizi)
+}

@@ -1,0 +1,47 @@
+@import "_resets.scss";
+
+.container {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+
+    p {
+        margin-top: 20px;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------
+$renkler: blue, yellow, red, orange, green, purple, deeppink, black, aqua, gray;
+
+@each $item in $renkler {
+    .arka-renk-#{$item} {
+        background-color: $item;
+    }
+}
+
+// bu each komutu aynı C# programlamadaki foreach komutu gibi çalışır.
+// --------------------------------------------------------------------------------------------------------------
+@for $murat from 16 through 34 {
+    .border-#{$murat}px {
+        $murat: calc($murat/2);
+        border: #{$murat}px solid rgb(0, 238, 255);
+    }
+}
+
+// for komutu aynı C# taki for döngüsüne benzer yapıda çalışır, döngü oluşturmaya yarar
+// --------------------------------------------------------------------------------------------------------------
+
+$x: 10;
+
+@while $x >0 {
+
+    // bu üssteki kısım koşul ifadesinin ve "$x" gibi değişkenlerin yazıldığı kısımdır.
+    .box-shadow-#{$x} {
+        box-shadow: ($x+px) ($x+px) ($x+px) orangered;
+    }
+
+    $x: calc($x - 1);
+    // üstteki while komutu da her tur için yapılacak işlemi bildiren komuttur.
+}
+
+// while komutu da aynı C# taki while komutu gibi çalışır, döngü yapmak için kullanılır.

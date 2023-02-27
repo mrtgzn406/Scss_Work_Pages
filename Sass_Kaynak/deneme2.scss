@@ -1,0 +1,49 @@
+// bunlar @mixin kullanarak yaptığımız işlemlerdir, bu ifadeyi kullanarak adeta css kodlarını bir programlama dili
+// gibi kullanbiliyoruz. 
+
+@mixin ortak_ozellikler ($arka-renk: aqua, $yazi-rengi: deeppink, $kenarlik: 5px solid green) {
+
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: $arka-renk;
+    color: $yazi-rengi;
+    border: $kenarlik;
+
+
+}
+
+@function murat ($genislik) {
+
+
+    @return $genislik ==100+10;
+
+
+
+
+}
+
+#first {
+    @include ortak_ozellikler();
+    /*  eğer fonksiyon parametersindeki varsayılan değerleri kullanmak istersek 
+    bu çağırdığımız gerçek parametreyi boş bırakıyoruz böylece o fonksiyonun formal parametresine
+    varsayılan olarak yazılan değerleri alıyoruz. */
+}
+
+#second {
+    // @include ortak_ozellikler(blue, magenta, 5px dashed gold);
+    @include ortak_ozellikler(blue, magenta, 5px dashed gold);
+}
+
+#third {
+    @include ortak_ozellikler(rgb(62, 7, 126), magenta, 5px double none);
+    // box-shadow: inset -5px -5px 20px rgb(9, 255, 0);
+}
+
+#fourth {
+    background-color: darken(aquamarine, 40);
+    color: lighten(black, 80);
+    width: murat(100px);
+
+
+
+}

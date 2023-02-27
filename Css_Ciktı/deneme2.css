@@ -1,0 +1,33 @@
+@charset "UTF-8";
+#first {
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: aqua;
+  color: deeppink;
+  border: 5px solid green;
+  /*  eğer fonksiyon parametersindeki varsayılan değerleri kullanmak istersek 
+  bu çağırdığımız gerçek parametreyi boş bırakıyoruz böylece o fonksiyonun formal parametresine
+  varsayılan olarak yazılan değerleri alıyoruz. */
+}
+
+#second {
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: blue;
+  color: magenta;
+  border: 5px dashed gold;
+}
+
+#third {
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: rgb(62, 7, 126);
+  color: magenta;
+  border: 5px double none;
+}
+
+#fourth {
+  background-color: #00b276;
+  color: #cccccc;
+  width: false;
+}/*# sourceMappingURL=deneme2.css.map */

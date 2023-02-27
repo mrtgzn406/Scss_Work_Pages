@@ -1,0 +1,30 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.kapsayici {
+  width: 1000px;
+  border: 10px solid green;
+  margin: auto;
+}
+.kapsayici .menu {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  height: 100px;
+  background-color: #00b3b3;
+  transform: translate(-50%, -50%);
+  /*          darken fonksiyonu renkleri koyu hale getirmek için lighten fonksiyonu ise renkleri açık hale getirmek için kullanılır, 
+  fonksiyonun içindeki $color: parametresi renk tanımlamak için , $amount: parametresi ise yüzde kaç rengi 
+  koyulaştıracağını ve beyazlaştıracağını bildirmek için kullanılır */
+}
+.kapsayici .insider_div {
+  width: 400px;
+}
+.kapsayici .insider_div p {
+  font-style: italic;
+}/*# sourceMappingURL=deneme1.css.map */

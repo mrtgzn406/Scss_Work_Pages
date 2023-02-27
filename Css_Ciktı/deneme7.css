@@ -1,0 +1,39 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div .paragraph1 {
+  font-family: arial;
+  font-family: "Georgia";
+}
+div .paragraph2 {
+  border: 7px solid darkviolet;
+  /* bu str-index(,) fonksiyonu ise sol tarafa kaynak string'i sağ tarafa aranılan string'i yazdığımız bir yerdir,
+  aranılan string değer kaynak string ifadesinin kaçıncı karakterinden başlıyorsa str-index foksiyonundan
+  dönen değer de sayısal olarak o olur, eğer aranan string yoksa o zaman null değer döner.  */
+}
+div .paragraph3 {
+  font-family: "Gothic Medium Franklin ";
+  /* bu str-insert() komutu ise bir string fonksiyonudur, var olan stringlere kaynak string'in istenilen
+  kısmından indeks numaraları kullanarak başka stringler eklemeyi sağlar.
+  Dipnot: eğer bir string ifadenin en sonuna değer eklemek istiyorsan + olarak kaynak değerin sahip olduğu
+  karakter sayısından fazla bir indeks numarası yaz, eğer string ifadenin en başına değer eklemek istiyorsan
+  - olarak fazla bir indeks numarası yaz. 
+
+  Mesela 10 karakterli bir string ifadenin en başına değer atamak için indeks numarası olarak -50 yazabiliriz,
+  ve en sağına değer eklemek için 50 yazabiliriz.
+  */
+}
+div .paragraph4 {
+  font-family: "Gothic";
+}
+div .paragraph5 {
+  font-family: "FRANKLIN GOTHIC MEDIUM";
+}
+div .paragraph6 {
+  font-family: "franklİn gothic medium";
+  font-family: uuxkl73;
+}/*# sourceMappingURL=deneme7.css.map */

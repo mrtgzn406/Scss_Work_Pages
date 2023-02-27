@@ -1,0 +1,39 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgb(250, 217, 73);
+  margin: auto;
+  width: 90%;
+  height: 300px;
+  border-top: 8px solid chartreuse;
+  border-right: 12px solid blueviolet;
+  border-bottom: 8px solid darkcyan;
+  border-left: 17px solid goldenrod;
+  padding-left: 34px;
+}
+.container span {
+  background-color: cornflowerblue;
+  display: block;
+  margin-top: 24px;
+  margin-left: 8px;
+  /*  comparable() fonksiyonu 2 tane değerin karşılaştırıp karşılaştırılamaaycağını söyler, parantezin içine 
+  2 tane değer yazarız ve bu fonksiyon true ya da false değerini döndürür. 
+  */
+  padding: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.container div {
+  width: 675px;
+  /* unit() fonksiyonu eğer fonksiyon içine yazılan değer birimli ise true değilse false döndürür,
+  birimden kasıt şudur :"yazılan sayısal değerin px, pc, %, rem , em gibi bir birimi var mı, yoksa sadece
+  saf sayı mı yazılmış ?" 
+
+  unitless() fonksiyonu eğer fonksiyon içine yazılan değer birimsiz ise true, birimli ise false döndürür
+  */
+}/*# sourceMappingURL=deneme6.css.map */

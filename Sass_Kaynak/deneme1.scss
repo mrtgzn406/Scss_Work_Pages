@@ -1,0 +1,52 @@
+@import "_resets";
+
+$birincil_renk: red;
+$ikincil_renk: green;
+$üçüncül_renk: yellow;
+// bunlar normal değişken tanımlamalarıdır. Sass'ta her değişken $ işareti ardından 
+// bizim atadığımız bir isim ile başlar sonra değeri verilir.
+
+
+$genislikler: (
+    "container" : 1000px,
+    "ic_div": 400px,
+    "menu": 100%,
+);
+$yazi: (
+    "yazi_tipi_genisligi": bolder,
+    "yazi_rengi": rgb(226, 9, 9),
+    "harf_buyuklugu": uppercase,
+    "harf_araligi": 5px,
+    "yazi_ortalama": center
+);
+
+
+// Sass'ta map tanımlaması bu şekilde olur, bunu yaparak kendimizce bir yapı, bir sınıf oluşturup belli nesneler, 
+// etiketler veya içerikler için sürekli kullandığımız özellikleri bir arada toplayabiliriz
+.kapsayici {
+    width: map-get($genislikler, container);
+    border: 10px solid $ikincil_renk;
+    margin: auto;
+
+    .menu {
+        width: map-get($genislikler, menu);
+        text-align: map-get($yazi, yazi_ortalama);
+        font-weight: map-get($yazi , yazi_tipi_genisligi);
+        text-transform: map-get($map: $yazi, $key: harf_buyuklugu);
+        height: 100px;
+        background-color: darken($color: cyan, $amount: 15);
+        transform: translate(-50%, -50%);
+
+        /*          darken fonksiyonu renkleri koyu hale getirmek için lighten fonksiyonu ise renkleri açık hale getirmek için kullanılır, 
+        fonksiyonun içindeki $color: parametresi renk tanımlamak için , $amount: parametresi ise yüzde kaç rengi 
+        koyulaştıracağını ve beyazlaştıracağını bildirmek için kullanılır */
+    }
+
+    .insider_div {
+        width: map-get($genislikler, ic_div);
+
+        p {
+            font-style: italic;
+        }
+    }
+}

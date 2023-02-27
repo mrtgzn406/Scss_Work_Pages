@@ -1,0 +1,46 @@
+@import "_resets.scss";
+
+div {
+    .paragraph1 {
+        font-family: unquote("arial");
+        // string ifadenin tırnaklarını alır.
+        font-family: quote(Georgia);
+        // string ifadeye tırnak ekler.
+    }
+
+    .paragraph2 {
+        $metin1: "murat gozen";
+        border: str-index($metin1, "gozen")+px solid darkviolet;
+        /* bu str-index(,) fonksiyonu ise sol tarafa kaynak string'i sağ tarafa aranılan string'i yazdığımız bir yerdir,
+        aranılan string değer kaynak string ifadesinin kaçıncı karakterinden başlıyorsa str-index foksiyonundan
+        dönen değer de sayısal olarak o olur, eğer aranan string yoksa o zaman null değer döner.  */
+    }
+
+    .paragraph3 {
+        // font-family: str-insert($string: "", $insert: , $index: );
+        font-family: str-insert(" Franklin ", "Gothic Medium", -50);
+        /* bu str-insert() komutu ise bir string fonksiyonudur, var olan stringlere kaynak string'in istenilen
+       kısmından indeks numaraları kullanarak başka stringler eklemeyi sağlar.
+       Dipnot: eğer bir string ifadenin en sonuna değer eklemek istiyorsan + olarak kaynak değerin sahip olduğu
+       karakter sayısından fazla bir indeks numarası yaz, eğer string ifadenin en başına değer eklemek istiyorsan
+       - olarak fazla bir indeks numarası yaz. 
+       
+       Mesela 10 karakterli bir string ifadenin en başına değer atamak için indeks numarası olarak -50 yazabiliriz,
+       ve en sağına değer eklemek için 50 yazabiliriz.
+       */
+
+    }
+
+    .paragraph4 {
+        font-family: str-slice("Franklin Gothic Medium", 10, 15);
+    }
+
+    .paragraph5 {
+        font-family: to-upper-case("franklin gothic medium");
+    }
+
+    .paragraph6 {
+        font-family: to-lower-case("FRANKLİN GOTHIC MEDIUM");
+        font-family: unique-id();
+    }
+}

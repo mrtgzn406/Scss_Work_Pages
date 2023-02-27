@@ -1,0 +1,93 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 900px;
+  margin: auto;
+  border: 5px dotted limegreen;
+}
+#container nav {
+  width: 100%;
+}
+#container nav ul {
+  background-color: black;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+#container nav ul li {
+  width: 160px;
+}
+#container nav ul li ul {
+  display: none;
+  position: absolute;
+}
+#container nav ul li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  color: hsl(180deg, 100%, 50%);
+  /* hsla fonksiyonu bir renk fonksiyonudur ve foksiyon içine yazılan;
+   hue değeri 0 ila 360 arasında yazacağımız bir sayı ile renk tanımlamamızı sağlar,
+   saturation rengin canlılık oranını ifade eder, 100% yazılırsa renk olduğu gibi görünür, 
+   %100'den aşağıda yazılırsa renk soluklaşmaya başlar ve soluklaşma rengin grileşmesiyle olur,
+   lightness rengin parlaklık oranını belirler, %50 verilirse renk olduğu gibi görünür, bunun yukarısına
+   çıkıldıkça renk beyazlaşır, aşağısına inildikçe renk koyulaşır,
+   alpha ise rengin saydamlık değerini belirler, 1 verilirse renk olduğu gibi görünür, 1'in aşağısında 
+   0.4, 0.8 gibi sayılar verilirse saydamlık artar.
+   */
+  background-color: black;
+}
+#container nav ul li a:hover {
+  background-color: #787878;
+  border: 2px solid lime;
+  line-height: 46px;
+}
+#container nav ul li:hover ul {
+  display: block;
+}
+#container main {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 0 0;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#container main p {
+  font-weight: bold;
+}
+#container main :nth-child(1) {
+  background-color: brown;
+  color: #5ad5d5;
+}
+#container main :nth-child(1):hover {
+  background-color: goldenrod;
+  color: #255adf;
+}
+#container main :nth-child(2) {
+  background-color: #6e0a9e;
+  /* mix() fonksiyonu iki rengi belli bir oranda birbirine karıştırmaya yarayan fonksiyondur. 
+  Eğer iki rengi eşit oranda karıştırmak istiyorsak fonksiyonun sonuna karıştırma oranı olarak 50% yazmalıyız,
+  Örneğin yukarıdaki örnek için eğer o karıştırma oranına 100% yazsak fonksiyon tamamen sol taraftaki
+  rengi baz alır mavi olurdu, eğer 0% yazsak tam sağdakini baz alır kırmızı olurdu.
+  */
+  color: aqua;
+  /* adjust-color ve scale-color fonksiyonları yukarıdaki yorum satırında da görüldüğü gibi bir rengin birçok özelliğini
+   tanımlamaya yarayan bir fonksiyondur */
+}
+#container main :nth-child(3) {
+  background-color: #ca82ff;
+  color: #428200;
+}
+#container main :nth-child(4) {
+  background-color: #004d00;
+  color: hsl(300deg, 40%, 50%);
+}/*# sourceMappingURL=deneme8.css.map */

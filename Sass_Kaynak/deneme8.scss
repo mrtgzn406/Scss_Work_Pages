@@ -1,0 +1,123 @@
+@import "_resets.scss";
+
+#container {
+    width: 900px;
+    margin: auto;
+    border: 5px dotted limegreen;
+
+    nav {
+        width: percentage(1);
+        // yüzdelik olarak değer tanımlamaya yarayan renk fonksiyonudur, 1 = 100%, 0.4 = 40% demektir
+
+        ul {
+            background-color: black;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+
+            li {
+                width: 160px;
+
+                ul {
+                    display: none;
+                    position: absolute;
+                }
+
+                a {
+                    display: block;
+                    height: 50px;
+                    line-height: 50px;
+                    text-decoration: none;
+                    text-align: center;
+                    // color: hsla(hue, saturation, lightness, alpha);
+                    color: hsla(180, 100%, 50%, 1);
+                    /* hsla fonksiyonu bir renk fonksiyonudur ve foksiyon içine yazılan;
+                     hue değeri 0 ila 360 arasında yazacağımız bir sayı ile renk tanımlamamızı sağlar,
+                     saturation rengin canlılık oranını ifade eder, 100% yazılırsa renk olduğu gibi görünür, 
+                     %100'den aşağıda yazılırsa renk soluklaşmaya başlar ve soluklaşma rengin grileşmesiyle olur,
+                     lightness rengin parlaklık oranını belirler, %50 verilirse renk olduğu gibi görünür, bunun yukarısına
+                     çıkıldıkça renk beyazlaşır, aşağısına inildikçe renk koyulaşır,
+                     alpha ise rengin saydamlık değerini belirler, 1 verilirse renk olduğu gibi görünür, 1'in aşağısında 
+                     0.4, 0.8 gibi sayılar verilirse saydamlık artar.
+                     */
+                    background-color: invert($color: white);
+
+
+                    &:hover {
+                        background-color: grayscale($color: crimson);
+                        // grayscale() fonksiyonu rengi grileştirmeye yarayan bir renk fonksiyonudur.
+                        // color: rgb(255, 253, 127);
+                        border: 2px solid invert($color: rgb(255, 0, 255));
+                        line-height: 46px;
+                    }
+                }
+
+                &:hover ul {
+                    display: block;
+                }
+            }
+
+        }
+    }
+
+    main {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        width: percentage($number: 1);
+        // background-color: hsl(hue, saturation, lightness);
+        flex: 1 0 0;
+        justify-content: space-evenly;
+        align-items: center;
+
+        p {
+            font-weight: bold;
+
+        }
+
+        :nth-child(1) {
+            background-color: brown;
+            color: invert($color: brown);
+            // invert() fonksiyonu içine yazılan rengin tam zıttını geri döndüren bir renk fonksiyonudur
+
+            &:hover {
+                background-color: goldenrod;
+                color: invert($color: goldenrod);
+            }
+        }
+
+        :nth-child(2) {
+            // background-color: blue(rgb(185, 55, 55));
+            // color: complement($color: white);
+            background-color: mix(blue, crimson, 50%);
+            /* mix() fonksiyonu iki rengi belli bir oranda birbirine karıştırmaya yarayan fonksiyondur. 
+            Eğer iki rengi eşit oranda karıştırmak istiyorsak fonksiyonun sonuna karıştırma oranı olarak 50% yazmalıyız,
+            Örneğin yukarıdaki örnek için eğer o karıştırma oranına 100% yazsak fonksiyon tamamen sol taraftaki
+            rengi baz alır mavi olurdu, eğer 0% yazsak tam sağdakini baz alır kırmızı olurdu.
+            */
+
+            // color: adjust-hue($color: lime, $degrees: 50deg);
+            // color: adjust-color($color: #000000, $red: 1, $green: 2, $blue: 3, $hue: 0, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
+            color: adjust-color($color: lime, $blue: 255);
+            /* adjust-color ve scale-color fonksiyonları yukarıdaki yorum satırında da görüldüğü gibi bir rengin birçok özelliğini
+             tanımlamaya yarayan bir fonksiyondur */
+
+        }
+
+        :nth-child(3) {
+            background-color: lighten($color: indigo, $amount: 50);
+            color: adjust-hue($color: indigo, $degrees: 175);
+            // adjust-hue() ise görüldüğü üzere sadece bir rengin tonunu değiştirmeye yarayan bir renk fonskiyonudur.
+        }
+
+        :nth-child(4) {
+            background-color: darken(green, 10);
+            color: hsla(300, 40%, 50%, 1);
+        }
+
+
+    }
+
+
+
+}

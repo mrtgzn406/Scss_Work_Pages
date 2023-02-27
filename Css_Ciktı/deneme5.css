@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+.container p {
+  margin-top: 20px;
+}
+
+.arka-renk-blue {
+  background-color: blue;
+}
+
+.arka-renk-yellow {
+  background-color: yellow;
+}
+
+.arka-renk-red {
+  background-color: red;
+}
+
+.arka-renk-orange {
+  background-color: orange;
+}
+
+.arka-renk-green {
+  background-color: green;
+}
+
+.arka-renk-purple {
+  background-color: purple;
+}
+
+.arka-renk-deeppink {
+  background-color: deeppink;
+}
+
+.arka-renk-black {
+  background-color: black;
+}
+
+.arka-renk-aqua {
+  background-color: aqua;
+}
+
+.arka-renk-gray {
+  background-color: gray;
+}
+
+.border-16px {
+  border: 8px solid rgb(0, 238, 255);
+}
+
+.border-17px {
+  border: 8.5px solid rgb(0, 238, 255);
+}
+
+.border-18px {
+  border: 9px solid rgb(0, 238, 255);
+}
+
+.border-19px {
+  border: 9.5px solid rgb(0, 238, 255);
+}
+
+.border-20px {
+  border: 10px solid rgb(0, 238, 255);
+}
+
+.border-21px {
+  border: 10.5px solid rgb(0, 238, 255);
+}
+
+.border-22px {
+  border: 11px solid rgb(0, 238, 255);
+}
+
+.border-23px {
+  border: 11.5px solid rgb(0, 238, 255);
+}
+
+.border-24px {
+  border: 12px solid rgb(0, 238, 255);
+}
+
+.border-25px {
+  border: 12.5px solid rgb(0, 238, 255);
+}
+
+.border-26px {
+  border: 13px solid rgb(0, 238, 255);
+}
+
+.border-27px {
+  border: 13.5px solid rgb(0, 238, 255);
+}
+
+.border-28px {
+  border: 14px solid rgb(0, 238, 255);
+}
+
+.border-29px {
+  border: 14.5px solid rgb(0, 238, 255);
+}
+
+.border-30px {
+  border: 15px solid rgb(0, 238, 255);
+}
+
+.border-31px {
+  border: 15.5px solid rgb(0, 238, 255);
+}
+
+.border-32px {
+  border: 16px solid rgb(0, 238, 255);
+}
+
+.border-33px {
+  border: 16.5px solid rgb(0, 238, 255);
+}
+
+.border-34px {
+  border: 17px solid rgb(0, 238, 255);
+}
+
+.box-shadow-10 {
+  box-shadow: 10px 10px 10px orangered;
+}
+
+.box-shadow-9 {
+  box-shadow: 9px 9px 9px orangered;
+}
+
+.box-shadow-8 {
+  box-shadow: 8px 8px 8px orangered;
+}
+
+.box-shadow-7 {
+  box-shadow: 7px 7px 7px orangered;
+}
+
+.box-shadow-6 {
+  box-shadow: 6px 6px 6px orangered;
+}
+
+.box-shadow-5 {
+  box-shadow: 5px 5px 5px orangered;
+}
+
+.box-shadow-4 {
+  box-shadow: 4px 4px 4px orangered;
+}
+
+.box-shadow-3 {
+  box-shadow: 3px 3px 3px orangered;
+}
+
+.box-shadow-2 {
+  box-shadow: 2px 2px 2px orangered;
+}
+
+.box-shadow-1 {
+  box-shadow: 1px 1px 1px orangered;
+}/*# sourceMappingURL=deneme5.css.map */
