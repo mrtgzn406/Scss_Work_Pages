@@ -5,30 +5,37 @@
     margin: auto;
     width: percentage(0.9);
     // bu percentage() fonksiyonu yüzdelik olarak değer vermek için kullanılır
+
     height: abs(-300+600)+px;
     // abs() fonksiyonu herhangi bir sayının mutlak değerini vermek için kullanılır
+
     border-top: ceil(7.2px) solid chartreuse;
     // ceil() fonksiyonu en yakın yukarıdaki tam sayıya yuvarlar
+
     border-right: floor(12.9px) solid blueviolet;
     // floor() fonksiyonu en yakın aşağıdaki tam sayıya yuvarlar
+
     border-bottom: round(7.5px) solid darkcyan;
     border-left: round(16.8px) solid goldenrod;
-    // round() fonksiyonu küsüratı 0.5 ve yukarısında olan tam sayıları üst tam sayıya, küsüratı 0.5'in altında olan
-    // sayılarrın ise küsüratını atar, onu sadece tam sayı olarak bırakır.
+    // round() fonksiyonu küsüratı 0.5 ve yukarısında olan tam sayıları üst tam sayıya yuvarlar,
+    // küsüratı 0.5'in altında olan sayılarrın ise küsüratını atar, onu sadece tam sayı olarak bırakır.
+
     padding-left: random(60)+px;
     // random() fonksiyonu 1 ile fonksyion parantezi içine yazılan sayı arasında rastgele bir değer döndürür.
 
     span {
         background-color: cornflowerblue;
         display: block;
+
         margin-top: max(8, 10, 18, 24, 19)+px;
         // max() fonksiyonu parantez içine yazılan en büyük sayıyı almaya yarar.
+
         margin-left: min(10, 85, 947, 258, 63, 8)+px;
         // min() fonksiyonu parantez içine yazılan en küçük sayıyı almaya yarar.
 
 
         @if comparable(10px, 1pc) {
-            /*  comparable() fonksiyonu 2 tane değerin karşılaştırıp karşılaştırılamaaycağını söyler, parantezin içine 
+            /*  comparable() fonksiyonu 2 tane değerin karşılaştırıp karşılaştırılamayacağını söyler, parantezin içine 
             2 tane değer yazarız ve bu fonksiyon true ya da false değerini döndürür. 
             */
             padding: 30px;
@@ -50,12 +57,10 @@
     $sayilar: 15, 85, 94, 675, 582, 84, 654, 374, 248, 527, 438;
 
     div {
-        @if unit(3) {
+        @if unit(15) {
             width: max($sayilar...)+px;
 
-            /* unit() fonksiyonu eğer fonksiyon içine yazılan değer birimli ise true değilse false döndürür,
-            birimden kasıt şudur :"yazılan sayısal değerin px, pc, %, rem , em gibi bir birimi var mı, yoksa sadece
-            saf sayı mı yazılmış ?" 
+            /* unit() fonksiyonu eğer içine yazılan sayısal değerin px, pc, %, rem , em gibi bir birimi varsa onun sadece birim kısmını döndürür. Bu fonksiyonun içine mutlaka bir sayının veya sayısal değeri olan bir birimin yazılması gerekir. Mesela 16px, 20rem gibi.
             
             unitless() fonksiyonu eğer fonksiyon içine yazılan değer birimsiz ise true, birimli ise false döndürür
             */
